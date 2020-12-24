@@ -28,6 +28,7 @@ import scala.collection.JavaConverters._
 import scala.collection.mutable
 import scala.io.Source
 import scala.xml.Node
+import scala.util.control.NonFatal
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize
