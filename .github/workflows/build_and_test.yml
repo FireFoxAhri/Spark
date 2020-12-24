@@ -25,9 +25,9 @@ jobs:
       - name: Run install
         run: ./dev/make-distribution.sh --name custom-spark --tgz -Dhadoop.version=3.2.1 -Phive -Phive-thriftserver -Pyarn
       - name: display
-        run: ls -lah && tree
+        run: ls -lah
       - name: Download a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: wedatasphere-linkis-0.9.4-dist.tar.gz
-          path: assembly/target/wedatasphere-linkis-0.9.4-dist.tar.g
+          name: spark-3.0.1-bin-custom-spark.tgz
+          path: spark-3.0.1-bin-custom-spark.tgz
