@@ -23,9 +23,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Run install
-        run: ./dev/make-distribution.sh --name custom-spark --pip --r --tgz -Dhadoop.version=3.2.1 -Phive -Phive-thriftserver -Pyarn -Pkubernetes
+        run: ./dev/make-distribution.sh --name custom-spark --tgz -Dhadoop.version=3.2.1 -Phive -Phive-thriftserver -Pyarn
       - name: display
-        run: ls -lah
+        run: ls -lah && tree
       - name: Download a Build Artifact
         uses: actions/upload-artifact@v2
         with:
